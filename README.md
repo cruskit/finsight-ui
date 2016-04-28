@@ -1,12 +1,5 @@
 # finsight-ui
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
-
-## Build & development
-
-Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
+Provides a UI for interacting with the [finsight](https://github.com/cruskit/finsight) backend.
+ 
+Still very much a work in progress.
