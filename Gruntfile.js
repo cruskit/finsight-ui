@@ -101,9 +101,8 @@ module.exports = function (grunt) {
           //   ];
           // }
           //
-          middleware: function (connect, options) {
+          middleware: function (connect) {
               var middlewares = [];
-
               //if (!Array.isArray(options.base)) {
               //  options.base = [options.base];
               //}
