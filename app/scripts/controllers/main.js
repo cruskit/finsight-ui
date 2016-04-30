@@ -12,11 +12,22 @@ angular.module('finsightUiApp')
     function ($scope, $http) {
 
     $scope.strategyResults = '';
+    $scope.labels = [];
+    $scope.series = [];
+    $scope.data = [];
+
 
     $scope.loadOutcome = function(){
         $http.get('/finsight/strategy').success(function(data) {
             $scope.strategyResults = data;
             console.log('Loaded Strategy Outcome: ' + angular.toJson(data));
+
+            $scope.labels = $scope.strategyResults.date;
+            $scope.series = ['Unit Prices'];
+            $scope.data = [
+                $scope.strategyResults.unitPrice
+            ];
+
         }).error(function(){
             console.log('Unable to load strategy outcome');
         });
